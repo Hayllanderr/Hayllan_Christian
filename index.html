@@ -1,0 +1,35 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Formulário de Cadastro</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <h2>Formulário de Cadastro</h2>
+    <form>
+      <input type="text" placeholder="Nome" required>
+      <input type="email" placeholder="Email" required>
+      <input type="password" placeholder="Senha" required>
+      <button type="submit">Cadastrar</button>
+    </form>
+  </div>
+
+  <script>
+
+    const nomeInput = document.querySelector('input[type="text"]');
+    const emailInput = document.querySelector('input[type="email"]');
+    const senhaInput = document.querySelector('input[type="password"]');
+   const form = document.querySelector('form');
+
+    form.addEventListener('submit', function(event) {
+  
+      if (nomeInput.value === '') {
+        alert('Por favor, preencha o campo de nome.');
+        event.preventDefault(); 
+      }
+    });
+  </script>
+</body>
+</html>
